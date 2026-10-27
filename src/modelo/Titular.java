@@ -24,9 +24,36 @@ package modelo;
 public class Titular {
 
     // TODO(EJ1): declare los 3 atributos privados
+    private String nombre;
+    private String apellido;
+    private int edad;
 
     // TODO(EJ1): constructor
-
+    public Titular(String nombre, String apellido, int edad)
+    this.nombre= nombre;
+    this.apellido= apellido;
+    this.edad= edad;
     // TODO(EJ1): getters, getNombreCompleto, setEdad y esJubilado
-
+public String getnombre() {
+    return nombre;
+}
+public String getapellido() { 
+    return apellido;
+}
+public int getedad() {
+    return edad
+}
+public String getNombreCompleto() {
+    return nombre + " " + apellido;
+}
+public boolean setEdad(int nuevaEdad) {
+        if (nuevaEdad >= 18 && nuevaEdad <= 100) {
+            edad = nuevaEdad;
+            return true;
+}
+    return false;
+}
+ public boolean esJubilado() {
+        return edad >= 60;
+ 
 }
